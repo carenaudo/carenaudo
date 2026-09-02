@@ -1,6 +1,6 @@
 +++
 title = "Reimplementing the LCF format in Rust"
-description = "Notes on lcf-core: what the RPG Maker 2000/2003 binary format actually is, why writing it is much harder than reading it, and why the schema had to generate the code."
+description = "Notes on lcf-core: what the RPG Maker 2000/2003 binary format is, why writing it is harder than reading it, and the false completeness claim an AI assistant left in my own repository."
 date = 2026-09-02T14:00:00Z
 slug = "lcf-core-notes"
 
@@ -137,10 +137,37 @@ Which is a real result and a narrow one. It says the format machinery survives c
 the projects I have. It does not say it survives the enormous variety of real RPG Maker games
 that exist, and I would not claim otherwise.
 
-## What the AI assistant was and was not good for
+`lcf-core` is alpha. That is not modesty, it is the status.
 
-A fair amount of this was built by pair-programming with an AI assistant, and the split was
-sharper here than on most work.
+## The false claim in my own repository
+
+Which brings me to the part of this worth writing down.
+
+There is a document in this repository that opens by announcing complete **100% API-level
+feature parity** with C++ `liblcf`.
+
+That claim is false. Nobody enumerated liblcf's API and checked it off. What actually
+happened is that eight round-trip tests passed, and somewhere between that result and the
+document, it became a completeness claim about the entire library.
+
+I did not write that sentence, and that is exactly the point. It was produced in the middle
+of an AI-assisted session, in the confident register these tools default to, and then it sat
+in my repository — in my voice, under my name — looking like a fact I had established.
+Months later it is indistinguishable from something I verified, because nothing about it
+looks uncertain.
+
+This is the failure mode I would flag to anyone working this way. The assistant does not
+hedge unless you make it. It will summarise "the tests I was told to run passed" as "100%
+parity achieved," because that is the shape of the sentence that usually follows in the
+text it learned from. The generated code was checked by a test suite. The generated *prose
+about* the code was checked by nobody.
+
+Documentation written this way inherits the cadence of a finished result without inheriting
+the work that would justify it — and unlike a code bug, no test ever fails to tell you.
+
+## What the assistant was and was not good for
+
+With that caveat sitting in front, the split was sharper here than on most work.
 
 It was genuinely good at the mechanical surface: 153 fields of terms and vocabulary, seventy
 struct definitions, the enum translations. Wide, repetitive, well-specified work where the
@@ -152,12 +179,17 @@ plausible-looking implementation and a corrupted project file. Plausible is prec
 language model is good at producing, and plausible is not the bar when the failure mode is
 damaging someone's game.
 
-Which is, I think, the general shape of it: the assistant is fastest exactly where a schema
-or a test can check its work, and most dangerous exactly where neither can.
+So: fastest exactly where a schema or a test can check its work, most dangerous exactly where
+neither can — and prose is the place where neither can.
 
 ## What this is not
 
-It is not affiliated with, endorsed by, or supported by EasyRPG. Their open documentation of
-the format and their `liblcf` source are the reason any of this was possible, and their own
-[Editor](https://github.com/EasyRPG/Editor) is the mature, well-tested tool. If you have a
-project you care about, use theirs — and either way, keep backups.
+It is not finished, and it is not a replacement for anything. `lcf-core` is alpha: round-trip
+tested against a handful of real and synthetic projects, not against the variety of games
+that actually exist.
+
+It is also not affiliated with, endorsed by, or supported by EasyRPG. Their open
+documentation of the format and their `liblcf` source are the reason any of this was
+possible, and their own [Editor](https://github.com/EasyRPG/Editor) is the mature,
+well-tested tool. If you have a project you care about, use theirs — and either way, keep
+backups.
