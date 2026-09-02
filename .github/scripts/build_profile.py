@@ -348,6 +348,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-posts", action="store_true",
                         help="do not touch the README posts block")
+    parser.add_argument("--allow-partial", action="store_true",
+                        help="write the sheet even when the token cannot see "
+                             "private repositories (totals will be wrong)")
     args = parser.parse_args()
 
     tok = token()
@@ -358,9 +361,20 @@ def main():
             "totals will be wrong.\n")
 
     stats = collect(tok)
-    if not stats["saw_private"]:
-        sys.stderr.write("WARNING: no private repositories were visible to "
-                         "this token; totals cover public repositories only.\n")
+
+    # Refuse to overwrite a correct sheet with a degraded one. In CI the
+    # default GITHUB_TOKEN sees only this repository, which would otherwise
+    # silently produce a near-empty sheet and commit it. A red run is far
+    # better than a profile quietly showing the wrong numbers.
+    if not args.allow_partial and (stats["repos_counted"] == 0
+                                   or not stats["saw_private"]):
+        sys.stderr.write(
+            "ERROR: this token sees {} repository/repositories and no private "
+            "ones, so the totals would be wrong and are not being written. "
+            "Set the PROFILE_STATS_TOKEN secret to a fine-grained PAT with "
+            "read-only repository metadata access, or pass --allow-partial to "
+            "write anyway.\n".format(stats["repos_counted"]))
+        return 1
 
     assets = ROOT / "assets"
     assets.mkdir(exist_ok=True)
