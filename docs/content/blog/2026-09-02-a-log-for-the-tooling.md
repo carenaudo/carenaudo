@@ -1,6 +1,6 @@
 +++
 title = "A log for the tooling"
-description = "Why a chemical engineer ends up writing a Rust CLI, and what this log is for."
+description = "Why I write the code when a tool already exists, and what this log is for."
 date = 2026-09-02
 slug = "a-log-for-the-tooling"
 
@@ -8,20 +8,41 @@ slug = "a-log-for-the-tooling"
 tags = ["engineering", "science"]
 +++
 
-Most of what I build exists because a measurement needed making and the software to make it
-either did not exist, cost too much, or could not be inspected.
+For most of what I build, something else already exists that would do the job. That is worth
+saying up front, because "I wrote my own" tends to imply "nothing else would do," and that is
+rarely the honest reason.
 
-That is the honest through-line. A droplet hanging from a needle has a shape, and that shape
-encodes a surface tension — so you need contour extraction and a geometry fit, which becomes
-[Menipy](https://github.com/carenaudo/Menipy). The same droplet falling through air loses
-mass and cools, and the literature offers you several formulations that disagree — so you
-need an ODE integrator and a way to compare Wilson against Abramzon–Sirignano against the
-classical D²-law on identical conditions. Scale that up to an agricultural sprayer and the
-question becomes where the droplets land and how much never arrives at all.
+There are three reasons I actually end up writing the code.
 
-None of that is a software project when it starts. It becomes one at the point you notice
-you have re-derived the same property correlation in three notebooks and they no longer
-agree.
+## To find out where a tool fails
+
+You can use a model quite happily until it hands you an answer you have no way to check.
+Implementing it yourself — the property correlations, the solver, the assumptions the paper
+does not restate because everyone in that subfield already knows them — is the fastest way I
+know to learn what it does near the edge of its validity.
+
+Running Wilson against Abramzon–Sirignano against the classical D²-law on identical
+conditions tells you something that reading all three papers does not. Not because the
+papers are wrong, but because the disagreement between them only becomes concrete when the
+same integrator, the same properties and the same initial conditions are feeding all three.
+
+## Because the thing I need is too specific
+
+General tools are general, and that is their virtue. But when the measurement is a
+particular droplet geometry on a particular image series, or one instrument's undocumented
+binary format, the distance between what a tool gives you and what you need can be larger
+than the distance between nothing and what you need.
+
+That is roughly where [Menipy](https://github.com/carenaudo/Menipy) came from. A droplet
+hanging from a needle has a shape, and that shape encodes a surface tension — but getting
+from an image to a number means a contour you trust and a fit whose assumptions you can
+state.
+
+## To learn
+
+Sometimes there is no better reason than wanting to know how the thing works, and I would
+rather say that than dress it up as necessity. A fair amount of what is on my GitHub is
+there because I wanted to find out whether I could.
 
 ## What ends up here
 
