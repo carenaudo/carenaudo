@@ -232,10 +232,11 @@ def build_svg(stats, theme):
         'letter-spacing="1.5">C. RENAUDO</text>'.format(c["text"]))
     add('<text x="856" y="72" font-size="27" font-weight="700" fill="{}" '
         'text-anchor="end">Lv.{}</text>'.format(c["accent"], stats["level"]))
-    add('<text x="45" y="99" font-size="15" fill="{}">Chemical Engineer '
-        '&#183; Research Toolsmith</text>'.format(c["dim"]))
-    add('<text x="45" y="121" font-size="13" fill="{}">PLAPIQUI '
-        '(UNS&#8211;CONICET) &#183; Argentina</text>'.format(c["dim"]))
+    add('<text x="45" y="99" font-size="15" fill="{}">PhD Chemical '
+        'Engineering &#183; Research Toolsmith</text>'.format(c["dim"]))
+    add('<text x="45" y="121" font-size="13" fill="{}">Assistant Researcher, '
+        'PLAPIQUI (UNS&#8211;CONICET) &#183; JTP, Ing. Qu&#237;mica, UNS'
+        '</text>'.format(c["dim"]))
     add('<line x1="44" y1="140" x2="856" y2="140" stroke="{}" '
         'stroke-width="1"/>'.format(c["inner"]))
 

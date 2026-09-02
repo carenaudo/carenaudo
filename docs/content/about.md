@@ -3,8 +3,12 @@ title = "About"
 description = "Who I am and what I work on."
 +++
 
-I am a chemical engineer at **PLAPIQUI (UNS–CONICET)**, in Bahía Blanca, Argentina. My work
-sits between particle technology, droplet physics, and the software both of them need.
+I hold a PhD in Chemical Engineering. I am an Assistant Researcher at
+**PLAPIQUI (UNS–CONICET)** and *Jefe de Trabajos Prácticos* in the Chemical Engineering
+Department at **Universidad Nacional del Sur**, in Bahía Blanca, Argentina.
+
+My work sits between particle technology, droplet physics, and the software both of them
+need.
 
 ## Research
 
@@ -23,9 +27,9 @@ sits between particle technology, droplet physics, and the software both of them
 
 ## Teaching
 
-Undergraduate fluid mechanics and particulate solids processing, run through GitHub
-Classroom as solved exercises in notebooks, plus course tooling and a theory corpus for the
-Particle Engineering group.
+As *Jefe de Trabajos Prácticos*: undergraduate fluid mechanics and particulate solids
+processing, run through GitHub Classroom as solved exercises in notebooks, plus course
+tooling and a theory corpus for the Particle Engineering group.
 
 ## Elsewhere
 

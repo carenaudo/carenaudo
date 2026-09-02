@@ -1,13 +1,16 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/character-sheet-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/character-sheet-light.svg">
-  <img alt="Character sheet — C. Renaudo, Chemical Engineer and Research Toolsmith, PLAPIQUI (UNS–CONICET), Argentina" src="assets/character-sheet-light.svg" width="900">
+  <img alt="Character sheet — C. Renaudo, PhD in Chemical Engineering, Assistant Researcher at PLAPIQUI (UNS–CONICET) and Jefe de Trabajos Prácticos at Universidad Nacional del Sur, Argentina" src="assets/character-sheet-light.svg" width="900">
 </picture>
 
-I am a chemical engineer at **PLAPIQUI (UNS–CONICET)** in Argentina. I work on particle
-technology and droplet physics, I teach, and I build the software those two things need —
-image analysis, numerical models, instrument parsers, and the desktop tools that wrap them.
-Mostly Python and Rust. Occasionally a game engine, for the fun of it.
+PhD in Chemical Engineering. Assistant Researcher at **PLAPIQUI (UNS–CONICET)** and *Jefe de
+Trabajos Prácticos* in the Chemical Engineering Department at **Universidad Nacional del
+Sur**, in Bahía Blanca, Argentina.
+
+I work on particle technology and droplet physics, and I build the software those two things
+need — image analysis, numerical models, instrument parsers, and the desktop tools that wrap
+them. Mostly Python and Rust. Occasionally a game engine, for the fun of it.
 
 ---
 
@@ -53,9 +56,10 @@ documentation of the LCF format and `liblcf` reference implementation made it po
 
 ## 🎓 Teaching
 
-Undergraduate fluid mechanics and particulate solids processing, run through GitHub
-Classroom as solved exercises in notebooks, plus course tooling and a theory corpus for
-the Particle Engineering group. Reproducibility is a grading criterion, not a nice-to-have.
+As *Jefe de Trabajos Prácticos* in the Chemical Engineering Department at UNS: undergraduate
+fluid mechanics and particulate solids processing, run through GitHub Classroom as solved
+exercises in notebooks, plus course tooling and a theory corpus for the Particle Engineering
+group. Reproducibility is a grading criterion, not a nice-to-have.
 
 ## 📜 Dev log
 
