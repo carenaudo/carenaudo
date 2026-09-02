@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+
+{% block content %}
+<article class="frame post">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {# Undated pages (Projects, About) are not log entries: no date line,
+       and no reading time dangling off an absent separator. #}
+    {% if page.date %}
+    <p class="meta">
+      <time datetime="{{ page.date }}">{{ page.date | date(format="%d %B %Y") }}</time>
+      {% if page.reading_time %}<span>· {{ page.reading_time }} min read</span>{% endif %}
+    </p>
+    {% endif %}
+    {% if page.taxonomies.tags %}
+    <p class="tags">{% for tag in page.taxonomies.tags %}<a href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">{{ tag }}</a>{% endfor %}</p>
+    {% endif %}
+  </header>
+
+  {{ page.content | safe }}
+</article>
+
+{% if page.earlier or page.later %}
+<nav class="frame pager">
+  {% if page.later %}<a class="prev" href="{{ page.later.permalink | safe }}">&larr; {{ page.later.title }}</a>{% endif %}
+  {% if page.earlier %}<a class="next" href="{{ page.earlier.permalink | safe }}">{{ page.earlier.title }} &rarr;</a>{% endif %}
+</nav>
+{% endif %}
+{% endblock content %}

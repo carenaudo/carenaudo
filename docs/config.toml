@@ -1,0 +1,39 @@
+# Zola site configuration.
+#
+# `base_url` carries the `/carenaudo` path because this is a GitHub *project*
+# page, not a user page. Every link and asset must therefore be built with
+# `get_url(path=...)` in the templates - a hard-coded "/style.css" resolves to
+# carenaudo.github.io/style.css and 404s, while looking perfectly fine under
+# `zola serve` locally.
+base_url = "https://carenaudo.github.io/carenaudo"
+
+title = "C. Renaudo — Dev Log"
+description = "Particle and droplet science, Rust and Python engineering, AI-assisted development, and teaching."
+default_language = "en"
+author = "C. Renaudo"
+
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+smart_punctuation = true
+bottom_footnotes = true
+github_alerts = true
+insert_anchor_links = "heading"
+external_links_target_blank = true
+
+# Zola 0.23 requires an explicit theme choice. The dual-theme form emits
+# `light-dark()` colours, so code blocks follow the reader's system theme with
+# no extra CSS from us.
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+error_on_missing_language = true
+
+[extra]
+github_url = "https://github.com/carenaudo"
+profile_repo = "https://github.com/carenaudo/carenaudo"
