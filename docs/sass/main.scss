@@ -1,0 +1,242 @@
+// Dev log styles.
+//
+// The RPG window motif from the profile character sheet lives in the chrome -
+// frames, nav, headings. Prose stays plain and comfortable to read: a post
+// about Abramzon-Sirignano should not be set in a game font.
+
+:root {
+  color-scheme: light dark;
+
+  --bg: #eef2f9;
+  --win-top: #ffffff;
+  --win-bottom: #f4f7fd;
+  --edge: #5b7fb0;
+  --inner: #c3d1e6;
+  --text: #16233d;
+  --dim: #4f6180;
+  --accent: #8a5d0a;
+  --link: #1f4f96;
+  --rule: #d5dfef;
+  --chip: #e4ecf9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #080d17;
+    --win-top: #16233d;
+    --win-bottom: #0b1424;
+    --edge: #4d7bb5;
+    --inner: #2b426b;
+    --text: #e8eef7;
+    --dim: #93a6c4;
+    --accent: #f0c05a;
+    --link: #8fc0ff;
+    --rule: #223353;
+    --chip: #1b2b47;
+  }
+}
+
+$mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+  "DejaVu Sans Mono", monospace;
+$sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif;
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 1rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 17px/1.7 $sans;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--link); }
+a:hover { text-decoration-thickness: 2px; }
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  &:focus { left: 1rem; top: 1rem; background: var(--win-top); padding: .5rem 1rem; }
+}
+
+// The window frame: heavy outer edge plus an inner hairline.
+.frame {
+  max-width: 860px;
+  margin: 1.5rem auto;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(var(--win-top), var(--win-bottom));
+  border: 3px solid var(--edge);
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1.5px var(--inner);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+
+  .sigil {
+    font: 700 1.05rem/1 $mono;
+    letter-spacing: 2px;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+
+  nav a {
+    font: 700 .78rem/1 $mono;
+    letter-spacing: 1.5px;
+    color: var(--dim);
+    text-decoration: none;
+    &::before { content: "\00a0\00a0"; }        // reserve the cursor slot
+    &:hover { color: var(--text); }
+    &.on { color: var(--accent); }
+    &.on::before { content: "\25b8\00a0"; }     // the menu cursor
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: $mono;
+  line-height: 1.3;
+  letter-spacing: -.2px;
+}
+
+// `insert_anchor_links = "heading"` wraps every heading in an <a>; it must not
+// inherit link styling.
+h1 a, h2 a, h3 a, h4 a { color: inherit; text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover { text-decoration: underline; }
+
+h1 { font-size: 1.85rem; margin: 0 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.25rem 0 .75rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+
+.window-title {
+  margin-top: 0;
+  font-size: .78rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero p:first-of-type { margin-top: .5rem; }
+.hero p { color: var(--dim); }
+.hero h1 + p { font-size: 1.05rem; }
+
+// Entry lists
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 1rem 0;
+    border-top: 1px solid var(--rule);
+    &:first-child { border-top: 0; padding-top: 0; }
+  }
+
+  time {
+    display: block;
+    font: 400 .78rem/1 $mono;
+    letter-spacing: 1px;
+    color: var(--dim);
+    margin-bottom: .35rem;
+  }
+
+  > li > a {
+    font: 700 1.12rem/1.4 $mono;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  p { margin: .35rem 0 0; color: var(--dim); font-size: .95rem; }
+  .empty { color: var(--dim); font-family: $mono; font-size: .9rem; }
+}
+
+.tags a,
+.termlist a {
+  display: inline-block;
+  margin: .4rem .4rem 0 0;
+  padding: .15rem .55rem;
+  background: var(--chip);
+  border: 1px solid var(--inner);
+  border-radius: 999px;
+  font: 400 .74rem/1.5 $mono;
+  letter-spacing: .5px;
+  text-decoration: none;
+}
+
+.termlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li { display: inline-block; margin-right: .5rem; }
+  span { font: .74rem $mono; color: var(--dim); }
+}
+
+.more { margin: 1.25rem 0 0; font: .8rem $mono; }
+
+// Post body
+.post {
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  .meta { margin: 0; font: .78rem $mono; letter-spacing: 1px; color: var(--dim); }
+  img { max-width: 100%; height: auto; border-radius: 6px; }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding: .25rem 0 .25rem 1.25rem;
+    border-left: 3px solid var(--edge);
+    color: var(--dim);
+  }
+
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { padding: .5rem .6rem; border-bottom: 1px solid var(--rule); text-align: left; }
+  th { font-family: $mono; font-size: .78rem; letter-spacing: 1px; text-transform: uppercase; }
+}
+
+// Wide content scrolls inside its own box rather than the page.
+.post table,
+.post pre { display: block; max-width: 100%; overflow-x: auto; }
+
+code {
+  font: .88em $mono;
+  background: var(--chip);
+  padding: .12em .35em;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--inner);
+  border-radius: 8px;
+  line-height: 1.55;
+  font-size: .88rem;
+  code { background: none; padding: 0; }
+}
+
+.pager {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  font: .82rem $mono;
+  a { text-decoration: none; }
+  .next { margin-left: auto; text-align: right; }
+}
+
+footer.frame {
+  border-width: 1px;
+  box-shadow: none;
+  p { margin: 0; font: .78rem $mono; color: var(--dim); }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .frame { padding: 1.15rem 1.15rem; margin: 1rem auto; }
+  h1 { font-size: 1.5rem; }
+}

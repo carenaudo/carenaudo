@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value=config.default_language) }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+<meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+<link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') | safe }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%2316233d'/><rect x='2.5' y='2.5' width='11' height='11' rx='1.5' fill='none' stroke='%234d7bb5'/></svg>">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="frame nav">
+  <a class="sigil" href="{{ get_url(path='@/_index.md') | safe }}">C. RENAUDO</a>
+  <nav>
+    {% set path = current_path | default(value="/") %}
+    <a href="{{ get_url(path='@/blog/_index.md') | safe }}" {% if "/blog" in path %}class="on"{% endif %}>DEV LOG</a>
+    <a href="{{ get_url(path='@/projects.md') | safe }}" {% if "/projects" in path %}class="on"{% endif %}>PROJECTS</a>
+    <a href="{{ get_url(path='@/about.md') | safe }}" {% if "/about" in path %}class="on"{% endif %}>ABOUT</a>
+    <a href="{{ config.extra.github_url }}">GITHUB</a>
+  </nav>
+</header>
+
+<main id="main">
+{% block content %}{% endblock content %}
+</main>
+
+<footer class="frame">
+  <p>
+    Built with <a href="https://www.getzola.org/">Zola</a>, published from
+    <a href="{{ config.extra.profile_repo }}">the profile repository</a>.
+    <a href="{{ get_url(path='atom.xml') | safe }}">Atom feed</a>.
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Skills · {{ config.title }}{% endblock title %}
+{% block description %}Every tag used on the dev log.{% endblock description %}
+
+{% block content %}
+<article class="frame hero">
+  <h1>Skills</h1>
+  <p>Every tag used on the dev log.</p>
+</article>
+
+<section class="frame">
+  <ul class="termlist">
+    {% for term in terms %}
+    <li><a href="{{ term.permalink | safe }}">{{ term.name }}</a> <span>{{ term.pages | length }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock content %}

@@ -1,0 +1,4 @@
+# Zola build output
+docs/public/
+# local preview scratch
+_preview.html
