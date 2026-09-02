@@ -235,7 +235,7 @@ def build_svg(stats, theme):
     add('<text x="45" y="99" font-size="15" fill="{}">PhD Chemical '
         'Engineering &#183; Research Toolsmith</text>'.format(c["dim"]))
     add('<text x="45" y="121" font-size="13" fill="{}">Assistant Researcher, '
-        'PLAPIQUI (UNS&#8211;CONICET) &#183; JTP, Ing. Qu&#237;mica, UNS'
+        'PLAPIQUI (UNS&#8211;CONICET) &#183; Teaching Assistant, UNS'
         '</text>'.format(c["dim"]))
     add('<line x1="44" y1="140" x2="856" y2="140" stroke="{}" '
         'stroke-width="1"/>'.format(c["inner"]))

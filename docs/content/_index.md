@@ -5,9 +5,9 @@ template = "index.html"
 
 # Dev log
 
-PhD in Chemical Engineering. Assistant Researcher at **PLAPIQUI (UNS–CONICET)** and *Jefe de
-Trabajos Prácticos* in the Chemical Engineering Department at **Universidad Nacional del
-Sur**, in Bahía Blanca, Argentina. I work on particle technology and droplet physics, and I
+PhD in Chemical Engineering. Assistant Researcher at **PLAPIQUI (UNS–CONICET)** and Teaching
+Assistant in the Chemical Engineering Department at **Universidad Nacional del Sur**, in
+Bahía Blanca, Argentina. I work on particle technology and droplet physics, and I
 build the software that work needs: image analysis, numerical models, instrument parsers,
 and the desktop tools that wrap them.
 
