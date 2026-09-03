@@ -257,11 +257,20 @@ def build_svg(stats, theme):
     # Skill trees
     add('<text x="44" y="167" font-size="12" font-weight="700" fill="{}" '
         'letter-spacing="2.5">SKILL TREES</text>'.format(c["accent"]))
+    # The percentage sits right after the label, in the gap before the bars
+    # start - not after the bars, which reads as detached from the row it
+    # belongs to.
+    bars_x = 330
+    pct_x = bars_x - 20
+
     y = rows_top
     for key, pct in track_rows:
         label, color = TRACKS[key]
         add('<text x="44" y="{}" font-size="14" fill="{}">{}</text>'.format(
             y + 4, c["text"], esc(label)))
+        add('<text x="{}" y="{}" font-size="14" font-weight="700" fill="{}" '
+            'text-anchor="end">({:.0f}%)</text>'.format(
+                pct_x, y + 4, c["text"], pct))
         filled = int(round(pct / 100.0 * SEGMENTS))
         if pct > 0:
             # A non-zero track must light at least one segment, or a small
@@ -269,10 +278,8 @@ def build_svg(stats, theme):
             filled = max(filled, 1)
         for i in range(SEGMENTS):
             add('<rect x="{}" y="{}" width="21" height="15" rx="2" '
-                'fill="{}"/>'.format(330 + i * 26, y - 10,
+                'fill="{}"/>'.format(bars_x + i * 26, y - 10,
                                      color if i < filled else c["rail"]))
-        add('<text x="856" y="{}" font-size="14" font-weight="700" fill="{}" '
-            'text-anchor="end">({:.0f}%)</text>'.format(y + 4, c["text"], pct))
         y += row_step
 
     add('<line x1="44" y1="{y}" x2="856" y2="{y}" stroke="{c}" '
