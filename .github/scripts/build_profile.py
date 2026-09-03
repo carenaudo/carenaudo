@@ -40,6 +40,7 @@ IN_CI = bool(os.environ.get("CI"))
 TRACKS = {
     "track-research": ("Particle & Droplet Science", "#6bd968"),
     "track-gamedev": ("Game Systems", "#6aa9ff"),
+    "track-mobile": ("Mobile Apps", "#b98cf0"),
     "track-teaching": ("Teaching", "#f2c14e"),
     "track-systems": ("Developer Tooling", "#e0736d"),
 }
@@ -207,24 +208,36 @@ def build_svg(stats, theme):
     grad = "win-" + theme
     clip = "barclip-" + theme
 
+    # Everything below the skill trees is positioned relative to how many
+    # tracks there are. These were hard-coded for exactly four rows, so adding
+    # a fifth track drew it straight through the divider.
+    rows_top = 196
+    row_step = 34
+    divider_y = rows_top + len(track_rows) * row_step - 2
+    prof_label_y = divider_y + 30
+    bar_y = divider_y + 54
+    legend_y = bar_y + 44
+    foot_y = bar_y + 80
+    height = foot_y + 34
+
     o = []
     add = o.append
-    add('<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" '
-        'viewBox="0 0 900 500" role="img" '
-        'aria-label="Character sheet for C. Renaudo">')
+    add('<svg xmlns="http://www.w3.org/2000/svg" width="900" height="{h}" '
+        'viewBox="0 0 900 {h}" role="img" '
+        'aria-label="Character sheet for C. Renaudo">'.format(h=height))
     add('<defs><linearGradient id="{}" x1="0" y1="0" x2="0" y2="1">'
         '<stop offset="0" stop-color="{}"/>'
         '<stop offset="1" stop-color="{}"/></linearGradient>'
-        '<clipPath id="{}"><rect x="44" y="386" width="812" height="18" '
+        '<clipPath id="{}"><rect x="44" y="{}" width="812" height="18" '
         'rx="4"/></clipPath></defs>'.format(
-            grad, c["win_top"], c["win_bottom"], clip))
+            grad, c["win_top"], c["win_bottom"], clip, bar_y))
 
     # Window frame: heavy outer edge plus an inner hairline - the RPG Maker
     # message-box look.
-    add('<rect x="6" y="6" width="888" height="488" rx="10" fill="url(#{})" '
-        'stroke="{}" stroke-width="3"/>'.format(grad, c["edge"]))
-    add('<rect x="15" y="15" width="870" height="470" rx="6" fill="none" '
-        'stroke="{}" stroke-width="1.5"/>'.format(c["inner"]))
+    add('<rect x="6" y="6" width="888" height="{}" rx="10" fill="url(#{})" '
+        'stroke="{}" stroke-width="3"/>'.format(height - 12, grad, c["edge"]))
+    add('<rect x="15" y="15" width="870" height="{}" rx="6" fill="none" '
+        'stroke="{}" stroke-width="1.5"/>'.format(height - 30, c["inner"]))
     add('<g font-family="{}">'.format(MONO))
 
     # Title block
@@ -243,7 +256,7 @@ def build_svg(stats, theme):
     # Skill trees
     add('<text x="44" y="167" font-size="12" font-weight="700" fill="{}" '
         'letter-spacing="2.5">SKILL TREES</text>'.format(c["accent"]))
-    y = 196
+    y = rows_top
     for key, pct in track_rows:
         label, color = TRACKS[key]
         add('<text x="44" y="{}" font-size="14" fill="{}">{}</text>'.format(
@@ -259,36 +272,37 @@ def build_svg(stats, theme):
                                      color if i < filled else c["rail"]))
         add('<text x="856" y="{}" font-size="14" font-weight="700" fill="{}" '
             'text-anchor="end">{:.0f}%</text>'.format(y + 4, c["text"], pct))
-        y += 34
+        y += row_step
 
-    add('<line x1="44" y1="332" x2="856" y2="332" stroke="{}" '
-        'stroke-width="1"/>'.format(c["inner"]))
+    add('<line x1="44" y1="{y}" x2="856" y2="{y}" stroke="{c}" '
+        'stroke-width="1"/>'.format(y=divider_y, c=c["inner"]))
 
     # Proficiencies: one stacked bar plus a fixed-column legend.
-    add('<text x="44" y="362" font-size="12" font-weight="700" fill="{}" '
-        'letter-spacing="2.5">PROFICIENCIES</text>'.format(c["accent"]))
+    add('<text x="44" y="{}" font-size="12" font-weight="700" fill="{}" '
+        'letter-spacing="2.5">PROFICIENCIES</text>'.format(
+            prof_label_y, c["accent"]))
     x = 44.0
     add('<g clip-path="url(#{})">'.format(clip))
     for name, pct in lang_rows:
         w = 812.0 * pct / 100.0
-        add('<rect x="{:.1f}" y="386" width="{:.1f}" height="18" '
-            'fill="{}"/>'.format(x, w + 1.0,
+        add('<rect x="{:.1f}" y="{}" width="{:.1f}" height="18" '
+            'fill="{}"/>'.format(x, bar_y, w + 1.0,
                                  LANG_COLORS.get(name, FALLBACK_COLOR)))
         x += w
     add('</g>')
-    add('<rect x="44" y="386" width="812" height="18" rx="4" fill="none" '
-        'stroke="{}" stroke-width="1"/>'.format(c["inner"]))
+    add('<rect x="44" y="{}" width="812" height="18" rx="4" fill="none" '
+        'stroke="{}" stroke-width="1"/>'.format(bar_y, c["inner"]))
 
     for i, (name, pct) in enumerate(lang_rows):
         lx = 46 + i * 136
-        add('<circle cx="{}" cy="430" r="5" fill="{}"/>'.format(
-            lx + 5, LANG_COLORS.get(name, FALLBACK_COLOR)))
-        add('<text x="{}" y="435" font-size="13" fill="{}">{} {:.0f}%</text>'
-            .format(lx + 17, c["text"], esc(name), pct))
+        add('<circle cx="{}" cy="{}" r="5" fill="{}"/>'.format(
+            lx + 5, legend_y - 5, LANG_COLORS.get(name, FALLBACK_COLOR)))
+        add('<text x="{}" y="{}" font-size="13" fill="{}">{} {:.0f}%</text>'
+            .format(lx + 17, legend_y, c["text"], esc(name), pct))
 
-    add('<text x="44" y="466" font-size="11" fill="{}">aggregated across {} '
+    add('<text x="44" y="{}" font-size="11" fill="{}">aggregated across {} '
         'public and private repositories &#183; updated {}</text>'.format(
-            c["dim"], stats["repos_counted"], updated))
+            foot_y, c["dim"], stats["repos_counted"], updated))
     add('</g></svg>')
     return "\n".join(o) + "\n"
 
