@@ -1,4 +1,11 @@
 # Zola build output
 docs/public/
+
+# Local working notes for Claude Code (tone, style, workflow).
+# Kept out of the repository on purpose: local to this machine.
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
 # local preview scratch
 _preview.html

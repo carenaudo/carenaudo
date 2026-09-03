@@ -7,6 +7,22 @@
 <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
 <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
 <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') | safe }}">
+{# Math is opt-in per page (`[extra] math = true`), so pages without equations
+   load none of KaTeX. The version is pinned and each file carries a real
+   subresource-integrity hash: a floating version would silently change
+   rendering, and a compromised CDN would otherwise execute here. #}
+{% if (page is defined and page.extra.math is defined and page.extra.math) or (section is defined and section.extra.math is defined and section.extra.math) %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.5/dist/katex.min.css"
+  integrity="sha384-2dNi/m6JtSiviznrOIZ5fTiZ5As0In2QwkuXSgoqcQtCNplvJAbt+jveeN+8en73"
+  crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.5/dist/katex.min.js"
+  integrity="sha384-TTF8eEsEKInX2meLzP5V1z/npGYIElXYGksx93f0qBZHu6IL3PdzVB8objytx+TR"
+  crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.5/dist/contrib/auto-render.min.js"
+  integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+  crossorigin="anonymous"></script>
+<script defer src="{{ get_url(path='math.js') | safe }}"></script>
+{% endif %}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%2316233d'/><rect x='2.5' y='2.5' width='11' height='11' rx='1.5' fill='none' stroke='%234d7bb5'/></svg>">
 </head>
 <body>
