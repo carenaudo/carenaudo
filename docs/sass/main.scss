@@ -200,6 +200,14 @@ h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
   th { font-family: $mono; font-size: .78rem; letter-spacing: 1px; text-transform: uppercase; }
 }
 
+// Publication entries are one paragraph of title / authors / venue split by
+// <br>, so they want tighter leading and more space between entries than
+// ordinary prose.
+.post p:has(br) {
+  margin: 1.15rem 0;
+  line-height: 1.55;
+}
+
 // Wide content scrolls inside its own box rather than the page.
 .post table,
 .post pre { display: block; max-width: 100%; overflow-x: auto; }

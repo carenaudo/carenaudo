@@ -1,42 +1,42 @@
 +++
 title = "Three things on a phone"
-description = "Three Android apps in a month, and what a phone is actually good for."
+description = "Three Android apps in a month: where data lives, and whether a phone can carry the maths."
 date = 2026-09-03
 slug = "three-things-on-a-phone"
 
 [taxonomies]
-tags = ["engineering", "science"]
+tags = ["engineering", "science", "mobile"]
 +++
 
-Three Android apps this month, all Kotlin and Compose, none of them public yet. They have
-less in common than the count suggests.
+Three Android apps this month, all Kotlin and Compose, none of them public. They have less in
+common than the count suggests.
 
-**A personal finance tracker.** This one is unapologetically for me. Argentine personal
-finance has a shape that general-purpose apps do not model: two currencies in daily use, four
-simultaneous exchange rates that all mean different things, credit card purchases split into
-installments that stretch months ahead, and CEDEARs sitting alongside ordinary holdings. Every
-app I tried assumed one currency and one rate. That is the second reason from
-[the earlier post](@/blog/2026-09-02-a-log-for-the-tooling.md) — not that nothing exists, but
-that the gap between what exists and what I need is wider than the gap between nothing and
-what I need.
+**A personal finance tracker.** I tried a number of the existing ones first, and none of them
+worked the way I wanted — not for lack of features, but over where the data lives. I wanted
+it entirely on the device, with nothing sent anywhere, and a plain export to CSV or XLSX any
+time I want it back out. A private ledger I look at, not an account that syncs. That is a
+preference, not a gap in the market, and it was easier to build than to argue with.
 
-**A droplet evaporation simulator.** This is the one I actually care about. It integrates the
-Abramzon–Sirignano model with an adaptive Dormand–Prince step and a root-find nested inside
-each step — the same physics I run on a desktop, in a package that fits in a pocket.
+**A droplet evaporation simulator.** This one began as a question about the phone rather than
+about the physics: could I get an Abramzon–Sirignano integration running properly on Android
+— an adaptive Dormand–Prince step with a root-find nested inside each one? By desktop
+standards that is not heavy computation, but it is well past what a spreadsheet does, and I
+wanted to know how that class of problem behaves on a handset.
 
-Nothing about the model is new. What is new is where it runs. If you want to see how a droplet
-of a given diameter behaves at 30 °C and 40% humidity, the honest answer today is "install
-Python, get the dependencies, run the script" — which is a wall for a student, and an
-impossible ask for someone merely curious. Putting it on a phone removes the wall entirely.
-Type in conditions, get a curve.
+It runs, and it runs fast — on the one phone I have actually tried it on, a Moto Edge 40 Pro.
+Whether the numbers are *right* is a separate question, and validating them on the device is
+the part I have not solved. Speed was never going to be the hard half.
 
-The physics lives in its own package with no Android dependencies at all, which keeps it
-portable and means the model can be checked without a phone anywhere near it. That separation
-was the first thing I did and the thing I would defend hardest.
+The other half of it is reach. Type in a diameter, an air temperature and a humidity, get a
+curve, without installing a Python environment first. Plenty of tools can integrate this
+model; what I did not have was one in my pocket, and neither does a student with a question
+and a phone.
 
-It is early. There are no tests yet, which for a thing whose entire purpose is producing
-correct numbers is the obvious next job — and until that exists, treat anything it prints as
-a demonstration rather than a measurement.
+The physics lives in its own package with no Android dependencies at all, so the model can be
+exercised without a phone anywhere near it. That separation was the first thing I did, the
+thing I would defend hardest, and the route by which the numbers eventually get checked.
+There are no tests yet; that is the next job, and until there are, treat what it prints as a
+demonstration rather than a measurement.
 
 **The third one I am not going to describe.** It is an idea I am prototyping toward something
 that might become a small venture, and writing about it now would be writing about an
@@ -44,6 +44,6 @@ intention rather than a result. When there is something to show, it will be here
 
 ---
 
-The pattern I did not expect: two of these exist because a phone is a *delivery mechanism*,
-not because it is a good place to compute. The maths could run anywhere. What the phone
-supplies is that it is already in the hand of the person who wants the answer.
+Two of these turned out to be asking different questions. One was about where data sits and
+who else gets to see it. The other was about whether the device in your hand can carry the
+computation at all — which, this time, it could.

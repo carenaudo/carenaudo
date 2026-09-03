@@ -4,6 +4,8 @@
   <img alt="Character sheet — C. Renaudo, PhD in Chemical Engineering, Assistant Researcher at PLAPIQUI (UNS–CONICET) and Teaching Assistant at Universidad Nacional del Sur, Argentina" src="assets/character-sheet-light.svg" width="900">
 </picture>
 
+### [Dev log](https://carenaudo.github.io/carenaudo/) &nbsp;·&nbsp; [Publications](https://carenaudo.github.io/carenaudo/publications/) &nbsp;·&nbsp; [Projects](https://carenaudo.github.io/carenaudo/projects/)
+
 PhD in Chemical Engineering. Assistant Researcher at **PLAPIQUI (UNS–CONICET)** and Teaching
 Assistant in the Chemical Engineering Department at **Universidad Nacional del Sur**, in
 Bahía Blanca, Argentina.
@@ -28,7 +30,9 @@ it.
 
 ## 🔬 Research log
 
-The work behind most of the code, some of it still unpublished:
+The work behind most of the code — the published side of it is listed under
+**[Publications](https://carenaudo.github.io/carenaudo/publications/)**, and some of it is
+still unpublished:
 
 - **Droplet evaporation and cooling** — coupled heat and mass transfer for water droplets
   in air, comparing Wilson, Abramzon–Sirignano and classical D²-law formulations under
@@ -66,7 +70,8 @@ group. Reproducibility is a grading criterion, not a nice-to-have.
 ## 📜 Dev log
 
 Notes on scientific computing, Rust and Python engineering, AI-assisted development, and
-teaching — at **[carenaudo.github.io/carenaudo](https://carenaudo.github.io/carenaudo/)**.
+teaching — at **[carenaudo.github.io/carenaudo](https://carenaudo.github.io/carenaudo/)**,
+alongside the [peer-reviewed work](https://carenaudo.github.io/carenaudo/publications/).
 
 <!-- POSTS:START -->
 - **[Three things on a phone](https://carenaudo.github.io/carenaudo/blog/three-things-on-a-phone/)** &middot; 2026-09-03

@@ -35,6 +35,7 @@
     {% set path = current_path | default(value="/") %}
     <a href="{{ get_url(path='@/blog/_index.md') | safe }}" {% if "/blog" in path %}class="on"{% endif %}>DEV LOG</a>
     <a href="{{ get_url(path='@/projects.md') | safe }}" {% if "/projects" in path %}class="on"{% endif %}>PROJECTS</a>
+    <a href="{{ get_url(path='@/publications.md') | safe }}" {% if "/publications" in path %}class="on"{% endif %}>PAPERS</a>
     <a href="{{ get_url(path='@/about.md') | safe }}" {% if "/about" in path %}class="on"{% endif %}>ABOUT</a>
     <a href="{{ config.extra.github_url }}">GITHUB</a>
   </nav>
