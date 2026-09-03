@@ -30,7 +30,7 @@
 <rect x="772" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="200" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">70%</text>
+<text x="856" y="200" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">(70%)</text>
 <text x="44" y="234" font-size="14" fill="#16233d">Game Systems</text>
 <rect x="330" y="220" width="21" height="15" rx="2" fill="#6aa9ff"/>
 <rect x="356" y="220" width="21" height="15" rx="2" fill="#6aa9ff"/>
@@ -52,7 +52,7 @@
 <rect x="772" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="234" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">24%</text>
+<text x="856" y="234" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">(24%)</text>
 <text x="44" y="268" font-size="14" fill="#16233d">Mobile Apps</text>
 <rect x="330" y="254" width="21" height="15" rx="2" fill="#b98cf0"/>
 <rect x="356" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
@@ -74,7 +74,7 @@
 <rect x="772" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="268" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
+<text x="856" y="268" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">(2%)</text>
 <text x="44" y="302" font-size="14" fill="#16233d">Teaching</text>
 <rect x="330" y="288" width="21" height="15" rx="2" fill="#f2c14e"/>
 <rect x="356" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
@@ -96,7 +96,7 @@
 <rect x="772" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="302" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
+<text x="856" y="302" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">(2%)</text>
 <text x="44" y="336" font-size="14" fill="#16233d">Developer Tooling</text>
 <rect x="330" y="322" width="21" height="15" rx="2" fill="#e0736d"/>
 <rect x="356" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
@@ -118,29 +118,29 @@
 <rect x="772" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="336" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
+<text x="856" y="336" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">(2%)</text>
 <line x1="44" y1="364" x2="856" y2="364" stroke="#b4c5e0" stroke-width="1"/>
 <text x="44" y="394" font-size="12" font-weight="700" fill="#8a5d0a" letter-spacing="2.5">PROFICIENCIES</text>
 <g clip-path="url(#barclip-light)">
 <rect x="44.0" y="418" width="420.1" height="18" fill="#3572a5"/>
 <rect x="463.1" y="418" width="244.5" height="18" fill="#dea584"/>
 <rect x="706.6" y="418" width="32.4" height="18" fill="#a270ba"/>
-<rect x="738.0" y="418" width="27.1" height="18" fill="#8b949e"/>
+<rect x="738.0" y="418" width="27.1" height="18" fill="#a97bff"/>
 <rect x="764.0" y="418" width="26.1" height="18" fill="#3178c6"/>
 <rect x="789.1" y="418" width="25.5" height="18" fill="#e34c26"/>
 </g>
 <rect x="44" y="418" width="812" height="18" rx="4" fill="none" stroke="#b4c5e0" stroke-width="1"/>
 <circle cx="51" cy="457" r="5" fill="#3572a5"/>
-<text x="63" y="462" font-size="13" fill="#16233d">Python 52%</text>
+<text x="63" y="462" font-size="13" fill="#16233d">Python (52%)</text>
 <circle cx="187" cy="457" r="5" fill="#dea584"/>
-<text x="199" y="462" font-size="13" fill="#16233d">Rust 30%</text>
+<text x="199" y="462" font-size="13" fill="#16233d">Rust (30%)</text>
 <circle cx="323" cy="457" r="5" fill="#a270ba"/>
-<text x="335" y="462" font-size="13" fill="#16233d">Julia 4%</text>
-<circle cx="459" cy="457" r="5" fill="#8b949e"/>
-<text x="471" y="462" font-size="13" fill="#16233d">Kotlin 3%</text>
+<text x="335" y="462" font-size="13" fill="#16233d">Julia (4%)</text>
+<circle cx="459" cy="457" r="5" fill="#a97bff"/>
+<text x="471" y="462" font-size="13" fill="#16233d">Kotlin (3%)</text>
 <circle cx="595" cy="457" r="5" fill="#3178c6"/>
-<text x="607" y="462" font-size="13" fill="#16233d">TypeScript 3%</text>
+<text x="607" y="462" font-size="13" fill="#16233d">TypeScript (3%)</text>
 <circle cx="731" cy="457" r="5" fill="#e34c26"/>
-<text x="743" y="462" font-size="13" fill="#16233d">HTML 3%</text>
+<text x="743" y="462" font-size="13" fill="#16233d">HTML (3%)</text>
 <text x="44" y="498" font-size="11" fill="#4f6180">aggregated across 22 public and private repositories &#183; updated 2026-09-03</text>
 </g></svg>
