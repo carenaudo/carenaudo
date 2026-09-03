@@ -10,7 +10,9 @@ Bahía Blanca, Argentina.
 
 I work on particle technology and droplet physics, and I build the software those two things
 need — image analysis, numerical models, instrument parsers, and the desktop tools that wrap
-them. Mostly Python and Rust. Occasionally a game engine, for the fun of it.
+them. Mostly Python and Rust, lately some Kotlin: a few of those models belong on a phone,
+where the person who wants the answer already is. Occasionally a game engine, for the fun of
+it.
 
 ---
 
@@ -77,9 +79,10 @@ teaching — at **[carenaudo.github.io/carenaudo](https://carenaudo.github.io/ca
 <details>
 <summary>Open pack</summary>
 
-**Languages** — Python, Rust, Julia, Fortran, TypeScript, a little C++
+**Languages** — Python, Rust, Kotlin, Julia, Fortran, TypeScript, a little C++
 **Scientific** — NumPy, SciPy, OpenCV, CoolProp, Matplotlib, Jupyter, Streamlit
 **Desktop** — PySide6/Qt, egui/eframe, wgpu, rodio, rustysynth
+**Mobile** — Kotlin, Jetpack Compose, Material 3
 **Tooling** — Cargo, uv, pytest, pre-commit, GitHub Actions, Wrangler
 **Terrain** — Windows-first, cross-platform where it counts
 

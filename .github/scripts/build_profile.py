@@ -59,6 +59,7 @@ LANG_COLORS = {
     "Svelte": "#ff3e00", "C++": "#f34b7d", "CSS": "#563d7c",
     "JavaScript": "#f1e05a", "Shell": "#89e051", "TeX": "#3d6117",
     "Batchfile": "#c1f12e", "Makefile": "#427819", "C": "#555555",
+    "Kotlin": "#a97bff", "Java": "#b07219",
 }
 FALLBACK_COLOR = "#8b949e"
 
@@ -271,7 +272,7 @@ def build_svg(stats, theme):
                 'fill="{}"/>'.format(330 + i * 26, y - 10,
                                      color if i < filled else c["rail"]))
         add('<text x="856" y="{}" font-size="14" font-weight="700" fill="{}" '
-            'text-anchor="end">{:.0f}%</text>'.format(y + 4, c["text"], pct))
+            'text-anchor="end">({:.0f}%)</text>'.format(y + 4, c["text"], pct))
         y += row_step
 
     add('<line x1="44" y1="{y}" x2="856" y2="{y}" stroke="{c}" '
@@ -297,7 +298,7 @@ def build_svg(stats, theme):
         lx = 46 + i * 136
         add('<circle cx="{}" cy="{}" r="5" fill="{}"/>'.format(
             lx + 5, legend_y - 5, LANG_COLORS.get(name, FALLBACK_COLOR)))
-        add('<text x="{}" y="{}" font-size="13" fill="{}">{} {:.0f}%</text>'
+        add('<text x="{}" y="{}" font-size="13" fill="{}">{} ({:.0f}%)</text>'
             .format(lx + 17, legend_y, c["text"], esc(name), pct))
 
     add('<text x="44" y="{}" font-size="11" fill="{}">aggregated across {} '
