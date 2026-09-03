@@ -67,6 +67,7 @@ Notes on scientific computing, Rust and Python engineering, AI-assisted developm
 teaching — at **[carenaudo.github.io/carenaudo](https://carenaudo.github.io/carenaudo/)**.
 
 <!-- POSTS:START -->
+- **[Three things on a phone](https://carenaudo.github.io/carenaudo/blog/three-things-on-a-phone/)** &middot; 2026-09-03
 - **[Reimplementing the LCF format in Rust](https://carenaudo.github.io/carenaudo/blog/lcf-core-notes/)** &middot; 2026-09-02
 - **[A log for the tooling](https://carenaudo.github.io/carenaudo/blog/a-log-for-the-tooling/)** &middot; 2026-09-02
 <!-- POSTS:END -->

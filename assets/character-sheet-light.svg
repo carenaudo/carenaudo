@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="Character sheet for C. Renaudo">
-<defs><linearGradient id="win-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7fd"/><stop offset="1" stop-color="#e0e8f5"/></linearGradient><clipPath id="barclip-light"><rect x="44" y="386" width="812" height="18" rx="4"/></clipPath></defs>
-<rect x="6" y="6" width="888" height="488" rx="10" fill="url(#win-light)" stroke="#5b7fb0" stroke-width="3"/>
-<rect x="15" y="15" width="870" height="470" rx="6" fill="none" stroke="#b4c5e0" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="532" viewBox="0 0 900 532" role="img" aria-label="Character sheet for C. Renaudo">
+<defs><linearGradient id="win-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f7fd"/><stop offset="1" stop-color="#e0e8f5"/></linearGradient><clipPath id="barclip-light"><rect x="44" y="418" width="812" height="18" rx="4"/></clipPath></defs>
+<rect x="6" y="6" width="888" height="520" rx="10" fill="url(#win-light)" stroke="#5b7fb0" stroke-width="3"/>
+<rect x="15" y="15" width="870" height="502" rx="6" fill="none" stroke="#b4c5e0" stroke-width="1.5"/>
 <g font-family="ui-monospace,'SFMono-Regular','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace">
 <text x="44" y="72" font-size="31" font-weight="700" fill="#16233d" letter-spacing="1.5">C. RENAUDO</text>
 <text x="856" y="72" font-size="27" font-weight="700" fill="#8a5d0a" text-anchor="end">Lv.15</text>
@@ -30,7 +30,7 @@
 <rect x="772" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="186" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="200" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">72%</text>
+<text x="856" y="200" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">70%</text>
 <text x="44" y="234" font-size="14" fill="#16233d">Game Systems</text>
 <rect x="330" y="220" width="21" height="15" rx="2" fill="#6aa9ff"/>
 <rect x="356" y="220" width="21" height="15" rx="2" fill="#6aa9ff"/>
@@ -52,9 +52,9 @@
 <rect x="772" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="798" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="220" width="21" height="15" rx="2" fill="#ccd7ea"/>
-<text x="856" y="234" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">25%</text>
-<text x="44" y="268" font-size="14" fill="#16233d">Teaching</text>
-<rect x="330" y="254" width="21" height="15" rx="2" fill="#f2c14e"/>
+<text x="856" y="234" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">24%</text>
+<text x="44" y="268" font-size="14" fill="#16233d">Mobile Apps</text>
+<rect x="330" y="254" width="21" height="15" rx="2" fill="#b98cf0"/>
 <rect x="356" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="382" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="408" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
@@ -75,8 +75,8 @@
 <rect x="798" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="254" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <text x="856" y="268" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
-<text x="44" y="302" font-size="14" fill="#16233d">Developer Tooling</text>
-<rect x="330" y="288" width="21" height="15" rx="2" fill="#e0736d"/>
+<text x="44" y="302" font-size="14" fill="#16233d">Teaching</text>
+<rect x="330" y="288" width="21" height="15" rx="2" fill="#f2c14e"/>
 <rect x="356" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="382" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="408" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
@@ -97,28 +97,50 @@
 <rect x="798" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <rect x="824" y="288" width="21" height="15" rx="2" fill="#ccd7ea"/>
 <text x="856" y="302" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
-<line x1="44" y1="332" x2="856" y2="332" stroke="#b4c5e0" stroke-width="1"/>
-<text x="44" y="362" font-size="12" font-weight="700" fill="#8a5d0a" letter-spacing="2.5">PROFICIENCIES</text>
+<text x="44" y="336" font-size="14" fill="#16233d">Developer Tooling</text>
+<rect x="330" y="322" width="21" height="15" rx="2" fill="#e0736d"/>
+<rect x="356" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="382" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="408" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="434" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="460" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="486" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="512" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="538" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="564" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="590" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="616" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="642" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="668" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="694" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="720" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="746" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="772" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="798" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<rect x="824" y="322" width="21" height="15" rx="2" fill="#ccd7ea"/>
+<text x="856" y="336" font-size="14" font-weight="700" fill="#16233d" text-anchor="end">2%</text>
+<line x1="44" y1="364" x2="856" y2="364" stroke="#b4c5e0" stroke-width="1"/>
+<text x="44" y="394" font-size="12" font-weight="700" fill="#8a5d0a" letter-spacing="2.5">PROFICIENCIES</text>
 <g clip-path="url(#barclip-light)">
-<rect x="44.0" y="386" width="433.9" height="18" fill="#3572a5"/>
-<rect x="476.9" y="386" width="253.6" height="18" fill="#dea584"/>
-<rect x="729.5" y="386" width="33.9" height="18" fill="#a270ba"/>
-<rect x="762.4" y="386" width="26.1" height="18" fill="#e34c26"/>
-<rect x="787.5" y="386" width="25.2" height="18" fill="#3178c6"/>
-<rect x="811.7" y="386" width="23.2" height="18" fill="#4d41b1"/>
+<rect x="44.0" y="418" width="420.1" height="18" fill="#3572a5"/>
+<rect x="463.1" y="418" width="244.5" height="18" fill="#dea584"/>
+<rect x="706.6" y="418" width="32.4" height="18" fill="#a270ba"/>
+<rect x="738.0" y="418" width="27.1" height="18" fill="#8b949e"/>
+<rect x="764.0" y="418" width="26.1" height="18" fill="#3178c6"/>
+<rect x="789.1" y="418" width="25.5" height="18" fill="#e34c26"/>
 </g>
-<rect x="44" y="386" width="812" height="18" rx="4" fill="none" stroke="#b4c5e0" stroke-width="1"/>
-<circle cx="51" cy="430" r="5" fill="#3572a5"/>
-<text x="63" y="435" font-size="13" fill="#16233d">Python 53%</text>
-<circle cx="187" cy="430" r="5" fill="#dea584"/>
-<text x="199" y="435" font-size="13" fill="#16233d">Rust 31%</text>
-<circle cx="323" cy="430" r="5" fill="#a270ba"/>
-<text x="335" y="435" font-size="13" fill="#16233d">Julia 4%</text>
-<circle cx="459" cy="430" r="5" fill="#e34c26"/>
-<text x="471" y="435" font-size="13" fill="#16233d">HTML 3%</text>
-<circle cx="595" cy="430" r="5" fill="#3178c6"/>
-<text x="607" y="435" font-size="13" fill="#16233d">TypeScript 3%</text>
-<circle cx="731" cy="430" r="5" fill="#4d41b1"/>
-<text x="743" y="435" font-size="13" fill="#16233d">Fortran 3%</text>
-<text x="44" y="466" font-size="11" fill="#4f6180">aggregated across 19 public and private repositories &#183; updated 2026-09-02</text>
+<rect x="44" y="418" width="812" height="18" rx="4" fill="none" stroke="#b4c5e0" stroke-width="1"/>
+<circle cx="51" cy="457" r="5" fill="#3572a5"/>
+<text x="63" y="462" font-size="13" fill="#16233d">Python 52%</text>
+<circle cx="187" cy="457" r="5" fill="#dea584"/>
+<text x="199" y="462" font-size="13" fill="#16233d">Rust 30%</text>
+<circle cx="323" cy="457" r="5" fill="#a270ba"/>
+<text x="335" y="462" font-size="13" fill="#16233d">Julia 4%</text>
+<circle cx="459" cy="457" r="5" fill="#8b949e"/>
+<text x="471" y="462" font-size="13" fill="#16233d">Kotlin 3%</text>
+<circle cx="595" cy="457" r="5" fill="#3178c6"/>
+<text x="607" y="462" font-size="13" fill="#16233d">TypeScript 3%</text>
+<circle cx="731" cy="457" r="5" fill="#e34c26"/>
+<text x="743" y="462" font-size="13" fill="#16233d">HTML 3%</text>
+<text x="44" y="498" font-size="11" fill="#4f6180">aggregated across 22 public and private repositories &#183; updated 2026-09-03</text>
 </g></svg>
