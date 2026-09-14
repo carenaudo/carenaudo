@@ -10,7 +10,7 @@
 <line x1="44" y1="140" x2="856" y2="140" stroke="#2b426b" stroke-width="1"/>
 <text x="44" y="167" font-size="12" font-weight="700" fill="#f0c05a" letter-spacing="2.5">SKILL TREES</text>
 <text x="44" y="200" font-size="14" fill="#e8eef7">Particle &amp; Droplet Science</text>
-<text x="310" y="200" font-size="14" font-weight="700" fill="#e8eef7" text-anchor="end">(71%)</text>
+<text x="310" y="200" font-size="14" font-weight="700" fill="#e8eef7" text-anchor="end">(72%)</text>
 <rect x="330" y="186" width="21" height="15" rx="2" fill="#6bd968"/>
 <rect x="356" y="186" width="21" height="15" rx="2" fill="#6bd968"/>
 <rect x="382" y="186" width="21" height="15" rx="2" fill="#6bd968"/>
@@ -122,18 +122,18 @@
 <line x1="44" y1="364" x2="856" y2="364" stroke="#2b426b" stroke-width="1"/>
 <text x="44" y="394" font-size="12" font-weight="700" fill="#f0c05a" letter-spacing="2.5">PROFICIENCIES</text>
 <g clip-path="url(#barclip-dark)">
-<rect x="44.0" y="418" width="410.6" height="18" fill="#3572a5"/>
-<rect x="453.6" y="418" width="234.5" height="18" fill="#dea584"/>
-<rect x="687.0" y="418" width="51.6" height="18" fill="#e34c26"/>
-<rect x="737.6" y="418" width="30.7" height="18" fill="#a270ba"/>
-<rect x="767.3" y="418" width="25.7" height="18" fill="#a97bff"/>
-<rect x="792.0" y="418" width="24.8" height="18" fill="#3178c6"/>
+<rect x="44.0" y="418" width="419.0" height="18" fill="#3572a5"/>
+<rect x="462.0" y="418" width="230.8" height="18" fill="#dea584"/>
+<rect x="691.9" y="418" width="50.2" height="18" fill="#e34c26"/>
+<rect x="741.0" y="418" width="29.9" height="18" fill="#a270ba"/>
+<rect x="770.0" y="418" width="25.0" height="18" fill="#a97bff"/>
+<rect x="794.0" y="418" width="24.2" height="18" fill="#3178c6"/>
 </g>
 <rect x="44" y="418" width="812" height="18" rx="4" fill="none" stroke="#2b426b" stroke-width="1"/>
 <circle cx="51" cy="457" r="5" fill="#3572a5"/>
-<text x="63" y="462" font-size="13" fill="#e8eef7">Python (50%)</text>
+<text x="63" y="462" font-size="13" fill="#e8eef7">Python (51%)</text>
 <circle cx="187" cy="457" r="5" fill="#dea584"/>
-<text x="199" y="462" font-size="13" fill="#e8eef7">Rust (29%)</text>
+<text x="199" y="462" font-size="13" fill="#e8eef7">Rust (28%)</text>
 <circle cx="323" cy="457" r="5" fill="#e34c26"/>
 <text x="335" y="462" font-size="13" fill="#e8eef7">HTML (6%)</text>
 <circle cx="459" cy="457" r="5" fill="#a270ba"/>
@@ -142,5 +142,5 @@
 <text x="607" y="462" font-size="13" fill="#e8eef7">Kotlin (3%)</text>
 <circle cx="731" cy="457" r="5" fill="#3178c6"/>
 <text x="743" y="462" font-size="13" fill="#e8eef7">TypeScript (3%)</text>
-<text x="44" y="498" font-size="11" fill="#93a6c4">aggregated across 22 public and private repositories &#183; updated 2026-09-07</text>
+<text x="44" y="498" font-size="11" fill="#93a6c4">aggregated across 22 public and private repositories &#183; updated 2026-09-14</text>
 </g></svg>
