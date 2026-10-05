@@ -122,10 +122,10 @@
 <line x1="44" y1="364" x2="856" y2="364" stroke="#2b426b" stroke-width="1"/>
 <text x="44" y="394" font-size="12" font-weight="700" fill="#f0c05a" letter-spacing="2.5">PROFICIENCIES</text>
 <g clip-path="url(#barclip-dark)">
-<rect x="44.0" y="418" width="419.0" height="18" fill="#3572a5"/>
-<rect x="462.0" y="418" width="230.8" height="18" fill="#dea584"/>
+<rect x="44.0" y="418" width="418.9" height="18" fill="#3572a5"/>
+<rect x="461.9" y="418" width="231.0" height="18" fill="#dea584"/>
 <rect x="691.9" y="418" width="50.2" height="18" fill="#e34c26"/>
-<rect x="741.0" y="418" width="29.9" height="18" fill="#a270ba"/>
+<rect x="741.1" y="418" width="29.9" height="18" fill="#a270ba"/>
 <rect x="770.0" y="418" width="25.0" height="18" fill="#a97bff"/>
 <rect x="794.0" y="418" width="24.2" height="18" fill="#3178c6"/>
 </g>
@@ -142,5 +142,5 @@
 <text x="607" y="462" font-size="13" fill="#e8eef7">Kotlin (3%)</text>
 <circle cx="731" cy="457" r="5" fill="#3178c6"/>
 <text x="743" y="462" font-size="13" fill="#e8eef7">TypeScript (3%)</text>
-<text x="44" y="498" font-size="11" fill="#93a6c4">aggregated across 22 public and private repositories &#183; updated 2026-09-28</text>
+<text x="44" y="498" font-size="11" fill="#93a6c4">aggregated across 22 public and private repositories &#183; updated 2026-10-05</text>
 </g></svg>

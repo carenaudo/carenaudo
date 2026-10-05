@@ -74,9 +74,9 @@ teaching — at **[carenaudo.github.io/carenaudo](https://carenaudo.github.io/ca
 alongside the [peer-reviewed work](https://carenaudo.github.io/carenaudo/publications/).
 
 <!-- POSTS:START -->
+- **[Reclaiming the disk](https://carenaudo.github.io/carenaudo/blog/reclaiming-the-disk/)** &middot; 2026-09-28
 - **[Three things on a phone](https://carenaudo.github.io/carenaudo/blog/three-things-on-a-phone/)** &middot; 2026-09-03
 - **[Reimplementing the LCF format in Rust](https://carenaudo.github.io/carenaudo/blog/lcf-core-notes/)** &middot; 2026-09-02
-- **[A log for the tooling](https://carenaudo.github.io/carenaudo/blog/a-log-for-the-tooling/)** &middot; 2026-09-02
 <!-- POSTS:END -->
 
 ## 🎒 Inventory
