@@ -167,11 +167,18 @@ uv's hardlinks make a file count in full in every environment that links it. The
 measure of what came back is the change in free space on the volume, and that is now the
 number the summary puts forward.
 
-cargo-trim has a smaller version of the same gap. It treats a directory named `target` as
-Cargo's if it contains a `debug/` or `release/` folder, even without a `Cargo.toml` next to it
-or the `CACHEDIR.TAG` Cargo writes. For a directory it is about to delete whole, that
-evidence is too weak, and it is the next thing to tighten. But a false positive there costs
-a rebuild at worst, not a lost environment.
+cargo-trim had a smaller version of the same gap. It treated a directory named `target` as
+Cargo's if it contained a `debug/` or `release/` folder, even without a `Cargo.toml` next to it
+or the `CACHEDIR.TAG` Cargo writes. It also accepted any `CACHEDIR.TAG`, though other tools
+write one too, and ignored the case of the name. For a directory it is about to delete whole,
+that evidence was too weak. A false positive there costs a rebuild at worst, not a lost
+environment, but it was still the wrong thing to delete.
+
+That is [fixed](https://github.com/carenaudo/cargo-trim/commit/755dc9f) now. A `target`
+directory, named exactly that, counts as Cargo's only on Cargo's own evidence: a
+`CACHEDIR.TAG` that names Cargo, a `.rustc_info.json`, or a `Cargo.toml` beside it. Tests
+cover both sides: a folder of another build system's `debug/` and `release/` output, another
+tool's cache tag and a capitalised `Target/` are all left alone.
 
 ## What the assistant was and was not good for
 
