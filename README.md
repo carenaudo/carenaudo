@@ -36,7 +36,8 @@ still unpublished:
 
 - **Droplet evaporation and cooling** — coupled heat and mass transfer for water droplets
   in air, comparing Wilson, Abramzon–Sirignano and classical D²-law formulations under
-  adaptive ODE solvers with event detection.
+  adaptive ODE solvers with event detection. Now public as
+  [Evaporacion.jl](https://github.com/carenaudo/evaporacion).
 - **Agricultural spray drift** — atomization, transport, evaporation and deposition,
   assembled as a literature knowledge base where every implemented model stays traceable
   to the equations in its source paper.
@@ -44,8 +45,8 @@ still unpublished:
   coated/attritioned and newborn particles. Solvers written across Fortran, Julia and
   Python, because the reference implementations were.
 - **Particle size distribution instrumentation** — parsing Horiba LA-950 `.ngb` (OLE/CFB)
-  binaries into Dv10/Dv50/Dv90 metrics and client-ready reports, with a Python
-  implementation shipping today and a Rust port tracking it for parity.
+  binaries into Dv10/Dv50/Dv90 metrics and client-ready reports. The Rust app,
+  Granumetric, is now the main one; the original Python implementation is kept as legacy.
 - **Grain morphometry** — sand-grain segmentation with MobileSAM/ONNX, then roundness and
   sphericity measurement and corner annotation.
 
@@ -59,6 +60,11 @@ far that goes on a real, file-format-accurate desktop tool, and one I write abou
 
 None of it is affiliated with or endorsed by [EasyRPG](https://easyrpg.org/), whose open
 documentation of the LCF format and `liblcf` reference implementation made it possible.
+
+Also on the bench: **Quire-Tex**, a visual LaTeX editor built on
+[WordCraft](https://github.com/storytold/wordcraft). It looks and works like Word, but the file
+underneath is LaTeX, written back byte for byte wherever you didn't edit it. Private for now;
+[more here](https://carenaudo.github.io/carenaudo/blog/word-you-can-diff/).
 
 ## 🎓 Teaching
 
@@ -85,8 +91,8 @@ alongside the [peer-reviewed work](https://carenaudo.github.io/carenaudo/publica
 <summary>Open pack</summary>
 
 **Languages** — Python, Rust, Kotlin, Julia, Fortran, TypeScript, a little C++
-**Scientific** — NumPy, SciPy, OpenCV, CoolProp, Matplotlib, Jupyter, Streamlit
-**Desktop** — PySide6/Qt, egui/eframe, wgpu, rodio, rustysynth
+**Scientific** — Julia, NumPy, SciPy, OpenCV, CoolProp, Matplotlib, Jupyter, Streamlit
+**Desktop** — PySide6/Qt, egui/eframe, Tauri, wgpu, rodio, rustysynth
 **Mobile** — Kotlin, Jetpack Compose, Material 3
 **Tooling** — Cargo, uv, pytest, pre-commit, GitHub Actions, Wrangler
 **Terrain** — Windows-first, cross-platform where it counts
