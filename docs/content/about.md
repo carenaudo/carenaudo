@@ -14,14 +14,16 @@ need.
 
 - **Droplet evaporation and cooling** — coupled heat and mass transfer for water droplets in
   air, comparing Wilson, Abramzon–Sirignano and classical D²-law formulations under adaptive
-  ODE solvers with event detection.
+  ODE solvers with event detection. Now public as
+  [Evaporacion.jl](https://github.com/carenaudo/evaporacion).
 - **Agricultural spray drift** — atomization, transport, evaporation and deposition,
   assembled as a literature knowledge base in which every implemented model stays traceable
   to the equations in its source paper.
 - **Population balance methods** — independently resolving aggregated, broken,
   coated/attritioned and newborn particles, with solvers across Fortran, Julia and Python.
 - **Particle size distribution instrumentation** — reading Horiba LA-950 `.ngb` (OLE/CFB)
-  binaries into Dv10/Dv50/Dv90 metrics and reports.
+  binaries into Dv10/Dv50/Dv90 metrics and reports. The Rust app, Granumetric, is now the
+  main one; the original Python implementation is kept as legacy.
 - **Grain morphometry** — sand-grain segmentation with MobileSAM/ONNX, then roundness and
   sphericity measurement.
 

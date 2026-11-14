@@ -45,7 +45,9 @@ TRACKS = {
     "track-systems": ("Developer Tooling", "#e0736d"),
 }
 
-SKIP = {"carenaudo"}          # this repository holds no project code
+# carenaudo holds no project code. quire-tex is built on WordCraft and carries its
+# whole history, so its byte counts would be WordCraft's, not mine: treated as a fork.
+SKIP = {"carenaudo", "quire-tex"}
 SKIP_OWNERS = {"community"}   # repositories owned by others we merely belong to
 
 # Jupyter Notebook byte counts are inflated by the base64 image outputs
